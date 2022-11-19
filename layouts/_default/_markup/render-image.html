@@ -1,5 +1,5 @@
 <!-- {{ $image := .Page.Resources.GetMatch .Destination }} -->
-{{ $image := resources.Get .Destination }}
+{{ $image := resources.GetMatch .Destination }}
 {{ if gt $image.Width 640 }}
 {{ $image = $image.Resize "580x" }}
 {{ end }}
