@@ -159,6 +159,11 @@
                 class="avatar">
             </a>
             {{ end }}
+            {{ if .Site.Params.website }}
+            <a style="margin: 0 10px 10px 0;" href="{{ .Site.Params.website }}" target="_blank">
+              <img alt="@stackoverflow" width="32" height="32" src="{{ "images/web.png" | absURL }}" class="avatar">
+            </a>
+            {{ end }}
 
             {{ if .Site.Params.links }}
             {{ range .Site.Params.links }}
@@ -174,11 +179,11 @@
             {{ end }}
             {{ end }}
 
-            {{ if .Site.Params.rss }}
+            <!-- {{ if .Site.Params.rss }}
             <a style="margin: 0 10px 10px 0;" href="{{ "index.xml" | absURL }}">
               <img alt="@rss" width="32" height="32" src="{{ "images/rss.png" | absURL }}" class="avatar">
             </a>
-            {{ end }}
+            {{ end }} -->
           </div>
         </div>
       </div>
